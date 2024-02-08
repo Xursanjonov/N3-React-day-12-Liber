@@ -1,8 +1,9 @@
 import React from 'react'
-import { SliderCard } from './components/slider-card'
+import { AudioBooksDiv, NewCard, SliderCard } from './components/slider-card'
 import { MiniCard } from './components/miniCard'
 import { HeroTitle } from './components/hero-title'
 import { Rukunlar } from '../Rukunlar/rukunlar'
+import { Btns } from './components/section-title-btns/Btns'
 // Image
 import code8 from '../../assets/code-8-img.png'
 import oruell from '../../assets/oruell.png'
@@ -20,17 +21,51 @@ import fantastic from '../../assets/fantasticlar.png'
 export const Home = () => {
   return (
     <>
+    <hr />
       <section className="home-hero bg-white w-full px-[59px] pt-[1rem] pb-[3.5rem] flex items-center justify-center gap-8">
         <div className="slider-div rounded-md flex pt-[32px] text-black pe-[1rem] items-center justify-between bg-blue-200">
           <div className="hero-start flex flex-col items-center justify-between">
             <p className='hero-start-title w-100 text-2xl text-center font-bold text-black'>Кўп ўқилаётганлар</p>
-            <div className="girlImg mb-[-1.55rem]"> <img className='w-100' src={heroBg} alt="" /> </div>
+            <div className="girlImg mb-[-1.55rem] pt-[5rem]"> <img className='w-100' src={heroBg} alt="" /> </div>
           </div>
-          <button className="w-[3rem] h-[2rem] rounded-full text-4xl bg-white text-center text-black pb-[3rem]">«</button>
-          <SliderCard img={oruell} title={'1984'} />
-          <SliderCard img={code8} title={'Code 8'} />
-          <SliderCard img={rich} title={'Rich dad poor dad'} />
-          <button className="w-[3rem] h-[2rem] rounded-full text-4xl bg-white text-center text-black pb-[3rem]">»</button>
+          {/* <button className="w-[3rem] h-[2rem] rounded-full text-4xl bg-white text-center text-black pb-[3rem]">«</button> */}
+          <div className="flex flex-col w-[60%]">
+            <div className="carousel w-full">
+              <div id="item1" className="carousel-item w-1/3">
+                <SliderCard img={oruell} title={'1984'} />
+              </div>
+              <div id="item_1" className="carousel-item w-1/3">
+                <SliderCard img={code8} title={'Code 8'} />
+              </div>
+              <div id="item-1" className="carousel-item w-1/3">
+                <SliderCard img={rich} title={'Rich'} />
+              </div>
+              <div id="item2" className="carousel-item w-1/3">
+                <SliderCard img={oruell} title={'1984'} />
+              </div>
+              <div id="item_2" className="carousel-item w-1/3">
+                <SliderCard img={code8} title={'Code 8'} />
+              </div>
+              <div id="item-2" className="carousel-item w-1/3">
+                <SliderCard img={rich} title={'Rich'} />
+              </div>
+              <div id="item3" className="carousel-item w-1/3">
+                <SliderCard img={oruell} title={'1984'} />
+              </div>
+              <div id="item_3" className="carousel-item w-1/3">
+                <SliderCard img={code8} title={'Code 8'} />
+              </div>
+              <div id="item-3" className="carousel-item w-1/3">
+                <SliderCard img={rich} title={'Rich'} />
+              </div>
+            </div>
+            <div className="flex justify-center w-full h-[40px] items-center py-2 gap-2">
+              <a href="#item1" className="w-[10px] h-[10px] rounded-full bg-pink-500 active:w-[12px] active:h-[12px] active:bg-red-500"></a>
+              <a href="#item-2" className="w-[10px] h-[10px] rounded-full bg-pink-500 active:w-[12px] active:h-[12px] active:bg-red-500"></a>
+              <a href="#item-3" className="w-[10px] h-[10px] rounded-full bg-pink-500 active:w-[12px] active:h-[12px] active:bg-red-500"></a>
+            </div>
+          </div>
+          {/* <button className="w-[3rem] h-[2rem] rounded-full text-4xl bg-white text-center text-black pb-[3rem]">»</button> */}
         </div>
         <HeroTitle />
       </section>
@@ -50,6 +85,14 @@ export const Home = () => {
           <Rukunlar img={ditectiv} title={'Детективлар'} />
           <Rukunlar img={fantastic} title={'Фантастика'} />
         </div>
+      </section>
+      <section id='newBooks' className='w-[100%] py-[2rem] px-[75px] bg-white flex flex-col items-center justify-center gap-[1.5rem]'>
+        <Btns title={'Янги қўшилганлар'} />
+        <NewCard />
+      </section>
+      <section className='audioBooks w-[100%] py-[2rem] px-[75px] bg-white flex flex-col items-center justify-center gap-[1.5rem]'>
+        <Btns title={'Аудио китоблар'} />
+        <AudioBooksDiv />
       </section>
     </>
   )

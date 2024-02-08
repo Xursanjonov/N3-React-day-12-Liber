@@ -8,8 +8,8 @@ import { Link } from "react-router-dom";
 
 export const Header = () => {
     return (
-        <header className='header'>
-            <div className="header-container sticky top-0 bg-white flex items-center justify-between px-[4.688rem] py-[1.375rem]">
+        <header className='header sticky top-0 z-50'>
+            <div className="header-container bg-white flex items-center justify-between px-[4.688rem] py-[1.375rem]">
                 <HeaderStart />
                 <HeaderCenter />
                 <HeaderEnd />
@@ -24,7 +24,7 @@ export const Header = () => {
                             </Link>
                         </li>
                     ))}
-                </ul>
+            </ul>
         </header>
     )
 }

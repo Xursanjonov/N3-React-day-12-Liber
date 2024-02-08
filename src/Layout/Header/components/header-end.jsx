@@ -19,14 +19,15 @@ export const HeaderEnd = () => {
                 <p>Kirish</p>
             </Link>
             <dialog id="my_modal_3" className="modal">
-                <div className="modal-box"> 
+                <div className="modal-box bg-gray-200 text-black"> 
                     <h3 className="font-bold text-lg flex items-center gap-1"><i className="fa-solid fa-user"></i> Kirish</h3>
+                    <h1 className='text-center text-black font-bold'>Ассалому алайкум <br /> Хуш келибсиз!</h1>
                     <form method="dialog">
                         <button className="btn-circle btn-ghost absolute right-2 top-2">✕</button>
                     </form>
                     <div className="mt-[1.5rem] flex flex-wrap items-center justify-around gap-5">
-                        <input className="input bg-white w-full join-item" type="email" placeholder="Email" />
-                        <input className="input bg-white w-full join-item" type="password" placeholder="Password" />
+                        <label htmlFor="telnumber"></label>
+                        <input id='telnumber' className="input bg-white text-black font-bold w-full join-item" type="tel" placeholder='Mobile Number' />
                         <p className='font-semibold italic'>To register ? <a className='text-blue-600 not-italic font-bold' href="/registratsiya">Sing up</a></p>
                         <button className="btn btn-success text-white w-50 join-item rounded-r-lg">Subscribe</button>
                     </div>
